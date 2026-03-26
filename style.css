@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --a:0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75vw;
+}
+
+.home {
+    padding: 10px;
+}
+
+.home ul li {
+    display: flex;
+    gap: 15px;
+    width: 14px;
+    list-style: none;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.heading {
+    display: flex;
+    gap: 15px;
+    padding: 7px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 15px;
+}
+
+.heading img {
+    width: 30px;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    color: grey;
+    gap: 13px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+
+.footer a {
+    color: grey;
+
+}
+
+.right {
+    margin: 16px 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+    border-radius: 4px;
+    height: 72px;
+    align-items: center;
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.spotifyPlaylist {
+    padding: 16px;
+}
+
+.spotifyPlaylist h1 {
+    padding: 16px;
+}
+
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 26px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 70vh;
+}
+
+.card {
+    width: 130px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all .9s;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card:hover {
+    background-color: rgb(119, 119, 119);
+    cursor: pointer;
+    --a:1;
+}
+
+.playBtn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 105px;
+    right: 15px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+
+.buttons>* {
+    margin: 0 12px;
+}
+
+.signupbtn {
+    background-color: rgb(34, 34, 34);
+    color: rgb(173, 170, 170);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signupbtn:hover {
+    font-size: 17px;
+    color: white;
+}
+
+.loginbtn {
+    background-color: white;
+    border-radius: 21px;
+    color: black;
+    font-weight: 900;
+    padding: 10px;
+    width: 79px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginbtn:hover {
+    font-weight: bold;
+    width: 80px;
+    font-size: 17px;
+}
+
+.playbar {
+    position: fixed;
+    bottom: 30px;
+    filter: invert(1);
+    background-color: rgba(249, 251, 249, 0.496);
+    width: 90%;
+    min-height: 40px;
+    padding: 18px;
+    width: 70vw;
+    border-radius: 20px;
+}
+
+.seekbar {
+    width: 96%;
+    height: 6px;
+    background: rgba(48, 46, 46, 0.531);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.circle {
+    height: 20px;
+    width: 4px;
+    border-radius: 11px;
+    background-color: black;
+    position: relative;
+    bottom: 7px;
+    left: 0%;
+    transition: left 0.5s;
+
+}
+
+.songlist {
+    height: 500px;
+    overflow: auto;
+    margin-bottom: 40px 0;
+}
+
+.songlist ul {
+    padding: 0 22px;
+}
+
+.songlist ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 12px 0;
+    border: 3px solid white;
+    margin: 12px 0;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.songlist .info {
+    font-size: 12px;
+    width: 345px;
+}
+
+.playnow span {
+    width: 90px;
+    font-size: 15px;
+}
+
+.playnow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.songbuttons img {
+    cursor: pointer;
+}
+
+.musicbox {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.songtime {
+    color: black;
+    width: 120px;
+    /* Enough space for "00:00 / 00:00" */
+    text-align: right
+}
+
+.songinfo {
+    color: black;
+    width: 250px;
+    /* Adjust this based on your design */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info div {
+    word-break: break-all;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburgercontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.left .close {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .left {
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 373px;
+        background-color: black;
+        padding: 0;
+    }
+
+    .songinfo,
+    .songtime {
+        width: auto;
+    }
+
+    .left .close {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+    }
+
+    .right {
+        width: 100vw;
+        margin: 0;
+        /* Remove side margins on mobile*/
+
+    }
+
+    /* FIX: Playbar should be wide on mobile */
+    .playbar {
+        width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Centers the fixed playbar */
+        height: auto;
+        padding: 15px;
+    }
+
+    /* FIX: Seekbar needs to stay relative to the playbar */
+    .seekbar {
+        width: 90%;
+        position: relative;
+        /* Changed from absolute for better flow */
+        margin: 10px auto;
+        bottom: 0;
+    }
+
+    .musicbox {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .songinfo,
+    .songtime {
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+        /* Fixes your previous song name issue */
+    }
+
+    .card {
+        width: 44vw;
+        transition: all .9s;
+    }
+
+    .card:hover {
+        background-color: rgb(119, 119, 119);
+        cursor: pointer;
+    }
+
+    .cardContainer {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        width: 80vw;
+    }
+}
